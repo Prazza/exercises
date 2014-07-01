@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<div>
+		<h2>Angry Gandalf</h2>
+
+		<script>
+		/**
+		 * Exercise 0: angryGandalf (example)
+		**/
+
+		function angryGandalf(type) {
+		// Define angryGandalf with input parameters
+		var message;
+		// Define the variables needed
+
+		// Run conditional on type for 'grey' and 'white'
+		if(type === 'grey') {
+			var message = "YOU...SHALL...NOT...PASS!");
+		}
+		// Run conditional on type if neither
+		else if(type === 'white') {
+			var message = "You merely passed me to your demise.");
+		}	else {
+			var message = "I don't think I'm Gandalf anymore.");
+		}
+		// Return message
+			console.log(message);
+			return message;
+		}
+		console.assert(angryGandalf('grey') === "YOU...SHALL NOT... PASS!");
+		console.assert(angryGandalf('white') === "You merely passed me to your demise.");
+		console.assert(angryGandalf(2) === "I don't think I'm Gandalf anymore.");
+
+		</script>
+		</div>
+	</body>
+</html>
+
+<!-- for making this a graphial UI with jquery -->
+<!-- jquery google hosted, grab jquery snippet from that site and paste it before the scrip tag -->
