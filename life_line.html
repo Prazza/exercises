@@ -10,54 +10,64 @@
 		// Defined Function
 		function tellFortune() {
 						
+			console.log("I'm in tellFortune");			
 			
-			
-			var random_name = Math.random()
-			var random_kids = Math.random()
-			var random_job = Math.random()
-			var random_home = Math.random()
+			var random_name = Math.random();
+			var random_kids = Math.random();
+			var random_job = Math.random();
+			var random_home = Math.random();
 			
 			if (random_name <= 0.33) {
-				random_name = 'Shaq'
+				random_name = 'Shaq';
 			} else if (random_name <= 0.66) {
-				random_name = 'Ryan Gosling'
+				random_name = 'Ryan Gosling';
 			} else {
-				random_name = 'The Oatmeal'
+				random_name = 'The Oatmeal';
 			}
-			return random_name;
+			//return random_name;
+
+			console.log("I'm at Rand Name");
 			
 			if (random_kids <= 0.33) {
-				random_kids = '300'
+				random_kids = '300';
 			} else if (random_name <= 0.66) {
-				random_kids = '5'
+				random_kids = '5';
 			} else {
-				random_kids = '0'
+				random_kids = '0';
 			}
-			return random_kids;
+			//return random_kids;
+
+			console.log("I'm at Rand Kids");
 			
 			if (random_job <= 0.33) {
-				random_name = 'bball player'
+				random_name = 'bball player';
 			} else if (random_name <= 0.66) {
-				random_job = 'stunt man'
+				random_job = 'stunt man';
 			} else {
-				random_job = 'Elivs Impersonator'
+				random_job = 'Elivs Impersonator';
 			}
-			return random_job;
+			//return random_job;
+
+			console.log("I'm at Rand Job");
 			
 			if (random_home <= 0.33) {
 				random_home = 'Spain'
 			} else if (random_home <= 0.66) {
-				random_home = 'NOLA'
+				random_home = 'NOLA';
 			} else {
-				random_home = 'The Vegas Strip'
+				random_home = 'The Vegas Strip';
 			}
-			return random_home;
+			//return random_home;
+
+			console.log("I'm at Rand Home");
 			
-		console.log("You are a "+ random_job "player from "+ random_home "and married to " + random_name  "with " + random_kids "kids.)
+		console.log("You are a "+ random_job + " from "+ random_home + " and married to " + random_name + " with " + random_kids + " kids.");
 		
 			
 		
 		};
+
+		tellFortune();
 		</script>
 		
 		
