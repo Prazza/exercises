@@ -1,39 +1,59 @@
 <html>
 	<head>
-		<title></title>
+		<title>Angry Gandalf</title>
 	</head>
 	<body>
 		<div>
 		<h2>Angry Gandalf</h2>
+		<input type='text' id='name' />
+		<button id='submitInput'>Submit</button>
+		<div id='gandalfMessage'></div>
+		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript">
+		
+		
+			/**
+			 * @exercise 0 - angryGandalf (example)
+			 **/
 
-		<script>
-		/**
-		 * Exercise 0: angryGandalf (example)
-		**/
+			// Define angryGandalf with input parameters
+			var angryGandalf = function(type) {
 
-		function angryGandalf(type) {
-		// Define angryGandalf with input parameters
-		var message;
-		// Define the variables needed
+			  // Define the variables needed
+			  var message;
 
-		// Run conditional on type for 'grey' and 'white'
-		if(type === 'grey') {
-			var message = "YOU...SHALL...NOT...PASS!");
-		}
-		// Run conditional on type if neither
-		else if(type === 'white') {
-			var message = "You merely passed me to your demise.");
-		}	else {
-			var message = "I don't think I'm Gandalf anymore.");
-		}
-		// Return message
-			console.log(message);
-			return message;
-		}
-		console.assert(angryGandalf('grey') === "YOU...SHALL NOT... PASS!");
-		console.assert(angryGandalf('white') === "You merely passed me to your demise.");
-		console.assert(angryGandalf(2) === "I don't think I'm Gandalf anymore.");
+			  // Run conditional on type for 'grey' and 'white'
+			  if (type === 'grey') {
+				message = "YOU...SHALL NOT... PASS!";
+			  } else if (type === 'white') {
+				message = "You merely passed me to your demise.";
+			  } else if (type === 'frodo') {
+				message = "I'm no hobbit!!!";
+			  } else if (type === 'bilbo') {
+				message = "I should have never taken you out of the shire!!!";
+			  } else {
+				message = "I don't think I'm Gandalf anymore.";
+			  }
 
+			  // Return message
+			  return message
+
+			}
+
+			console.assert(angryGandalf('grey') === "YOU...SHALL NOT... PASS!");
+			console.assert(angryGandalf('white') === "You merely passed me to your demise.");
+			console.assert(angryGandalf(2) === "I don't think I'm Gandalf anymore.");
+
+			// Event Handler
+			$("#submitInput").on('click', function() {
+			  var name = $("#name").val().toLowerCase();
+			  var message = angryGandalf(name);
+			  $("#gandalfMessage").html(message);
+			});
+
+		
+		
 		</script>
 		</div>
 	</body>

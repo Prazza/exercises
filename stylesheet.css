@@ -1,0 +1,28 @@
+body {
+	background-color: #FFDEAD;
+	vertical-align: middle;
+}
+
+.ex2 {
+	height: 150px;
+	width: 400px;
+	background-color: #EEEEE0;
+	
+<<<<<<< HEAD
+   
+    
+=======
+>>>>>>> FETCH_HEAD
+}
+
+.ex3 {
+	height: 250px;
+	width: 400px;
+	background-color: #E0EEE0;
+}
+
+p {
+	font-family: serif;
+	
+ 
+}

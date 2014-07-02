@@ -1,0 +1,93 @@
+<html>
+	<head>
+		<title>Maker Beer!</title>
+	</head>
+	<body>
+		
+	<input type='text' id='age' />
+	<button id='verify'>Verify</button>
+	<div id='beerAge'></div>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript">
+	
+	
+	// Write a function "ofAge" that:
+		// takes 1 argument: age
+		// calculates if that age is 21 of above
+		// Output true or false based on the if age statement
+		
+	var ofAge = function(type) {
+		var message;
+		
+		if (type >= 21) {
+			message = true;
+			} else {
+			message = false ;
+			}
+			return message;
+		}
+	
+	console.assert(ofAge(21) === true);
+	console.assert(ofAge(22) === true);
+	console.assert(ofAge(18) === false);
+	console.assert(ofAge(0) === false);
+	console.assert(ofAge(-2) === false);
+	
+	// Event Handler
+	$("#verify").on('click', function() {
+	var age = $("#age").val();
+	var message = ofAge(age);
+	$("#beerAge").html(message);
+	});
+	
+	</script>
+	
+	<script>
+	
+	/**
+ * Exercise 2 Part 2: getAge
+**/
+
+    function calculateAge(birthMonth, birthDay, birthYear) {
+
+        // Get Todays Date
+        var todayDate = new Date(),
+            todayYear = todayDate.getFullYear(),
+            todayMonth = todayDate.getMonth(),
+            todayDay = todayDate.getDate();
+
+        // Calculate Age
+        var age = todayYear - birthYear;
+
+        // Check month discrepancies
+        if (todayMonth < (birthMonth - 1)) {
+            age--;
+        }
+
+        // Check day discrepancies
+        if (((birthMonth - 1) == todayMonth) && (todayDay < birthDay)) {
+            age--;
+        }
+
+        // @return {Number} age
+        return age;
+    }
+	
+	console.log(calculateAge(8, 30, 1982);
+	
+	</script>
+	
+	<script>
+	// Takes 3 arguments: month, day, year to calculate age above 21
+	//function checkOfAge(month, day, year) {
+	//
+	//	var todayDate = new Date(),
+	//		todayYear = todayDate.getFullYear(),
+	//		todayMonth = todayDate.getMonth(),
+	//		todayDay = todayDate.getDate();
+	//		
+	//	
+	</script>
+	</body>
+</html>
