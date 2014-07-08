@@ -18,21 +18,21 @@
 		// Output true or false based on the if age statement
 		
 	var ofAge = function(age) {
-		var message;
+		//var message;
 		
 		if (age >= 21) {
-			message = true;
+			return true;
 			} else {
-			message = false ;
+			return false ;
 			}
 			return message;
 		}
 	
-	console.log(ofAge(userAge));
-	// console.log(ofAge(22) === true);
-	// console.log(ofAge(18) === false);
-	// console.log(ofAge(0) === false);
-	// console.log(ofAge(-2) === false);
+	console.log(ofAge(21) === true);
+	console.log(ofAge(22) === true);
+	console.log(ofAge(18) === false);
+	console.log(ofAge(0) === false);
+	console.log(ofAge(-2) === false);
 	
 	// Event Handler
 	$("#verify").on('click', function() {
